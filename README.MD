@@ -27,6 +27,51 @@ For both training and conversion APIs, a client needs to provide multiple argume
 
 ## Example
 In the *audios* subdirectory, we have placed the audio samples from *Dr. Daniel Erro Eslava*, which includes a training set composed 20 audio samples from two speakers and a test set containing 10 audio samples from the source speaker.
+Let's walk through a simple example. Using the training set in `Audios`, we can train a model with the given 20 audio samples from both the source speaker and target speaker. After that, this generated model can be used to convert any voice record of the source speaker into the voice of the target speaker, i.e., voice conversion.  Therefore, you may make yourself sound like President Trump if you can get his voice samples for training.
+On a Intel Core i7 CPU with 4 cores, it takes about 30 seconds to train and a negligible time to convert, which makes this implementation close to *real-time*.
+
+```c++
+#include <cstdio>
+#include "train_C.h"
+#include "convert_C.h"
+
+int main()
+{
+	// train a model with the given 20 source and target speaker's audios
+	// the audios files are named from 1 to 20
+	const char* sourceAudioDir = "E:/GitHub/vchsm/Audios/source_train/";
+	const char*  targetAudioDir = "E:/GitHub/vchsm/Audios/target_train/";
+	const int numTrainSamples = 20;
+	const char* sourceAudioList[numTrainSamples];
+	const char* targetAudioList[numTrainSamples];
+	for (int i = 0; i < numTrainSamples; ++i)
+	{
+		char* buff = new char[100];
+		std::sprintf(buff, "%s%d.wav", sourceAudioDir, i + 1);
+		sourceAudioList[i] = buff;
+		buff = new char[100];
+		std::sprintf(buff, "%s%d.wav", targetAudioDir, i + 1);
+		targetAudioList[i] = buff;
+	}
+	// model file to be generated
+	const char* modelFile = "E:/GitHub/vchsm/models/Model.dat";
+	// start training	
+	trainHSMModel(sourceAudioList, targetAudioList, numTrainSamples, 4, modelFile);
+	// deallocate
+	for (int i = 0; i < numTrainSamples; ++i)
+	{
+		delete[] sourceAudioList[i];
+		delete[] targetAudioList[i];
+	}
+	// perform conversion
+	const char* testAudio = "E:/GitHub/vchsm/Audios/test/jal_in_41_3.wav";
+	const char* testAudioConverted = "E:/GitHub/vchsm/Audios/test/jal_in_41_3_c.wav";
+	convertSingle(modelFile, testAudio, testAudioConverted);
+	// now we can compare the above audio before and after conversion
+	// and the audio from the source speaker after conversion should sound like the target
+	// speaker's voice.
+}
+```
 
 ## Additional notes for application on Mac/iOS
 Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel programming, the equivalent implementation using GCD is provided in *train_C.mm*.  Just use *train_C.mm*  to replace *train_C.cpp* (which depends on OpenMP) if you plan to deploy it on Mac/iOS. To facilitate the use of this library with Swift, a bridge file *C_Swift_bridge_header.h* is also included. 
