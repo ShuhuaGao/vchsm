@@ -23,7 +23,8 @@ After training, this algorithm produces a model file (whose path is specified by
 For the training phase, the algorithm needs to analyze multiple training samples (audios). To speed up the training procedure, a natural way is to divide the training set into several subsets whereby each subset can be processed simultaneously on a multiple-core processor. A naive implementation of this parallel process idea is realized with [OpenMP](https://en.wikipedia.org/wiki/OpenMP) in `train_c.cpp` or [GCD](https://en.wikipedia.org/wiki/Grand_Central_Dispatch) in `train_c.mm`.
 
 ## Note
-For both training and conversion APIs, a client needs to provide multiple arguments such as the list of source audios, target audios and the path of the model file. To make this process more friendly and more concise, the API can also make use of a single configuration file to specify all the required parameters. 
++ For both training and conversion APIs, a client needs to provide multiple arguments such as the list of source audios, target audios and the path of the model file. To make this process more friendly and more concise, the API can also make use of a single configuration file to specify all the required parameters. 
++ This algorithm only supports mono [WAV](https://en.wikipedia.org/wiki/WAV) audio files. You may use tools such as [MediaInfo](https://mediaarea.net/en/MediaInfo/Download) to get technical details of an audio file.
 
 ## Example
 In the *audios* subdirectory, we have placed the audio samples from *Dr. Daniel Erro Eslava*, which includes a training set composed 20 audio samples from two speakers and a test set containing 10 audio samples from the source speaker.
@@ -76,3 +77,6 @@ int main()
 ## Additional notes for application on Mac/iOS
 Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel programming, the equivalent implementation using GCD is provided in *train_C.mm*.  Just use *train_C.mm*  to replace *train_C.cpp* (which depends on OpenMP) if you plan to deploy it on Mac/iOS. To facilitate the use of this library with Swift, a bridge file *C_Swift_bridge_header.h* is also included. 
 
+## Publication
+Wu, Xiaoling, Shuhua Gao, Dong-Yan Huang, and Cheng Xiang. "Voichap: A standalone real-time voice change application on iOS platform." In Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), 2017, pp. 728-732. IEEE, 2017. 
+[get pdf here](http://www.apsipa.org/proceedings/2017/CONTENTS/papers2017/14DecThursday/TA-03/TA-03.5.pdf)
