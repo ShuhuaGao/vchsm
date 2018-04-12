@@ -79,6 +79,7 @@ int main()
 	std::getchar();
 }
 ```
+Codes for the above example are placed in [./CppAlgo/example/main.cpp](./CppAlgo/example/main.cpp).
 
 ## Additional notes for application on Mac/iOS
 Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel programming, the equivalent implementation using GCD is provided in *train_C.mm*.  Just use *train_C.mm*  to replace *train_C.cpp* (which depends on OpenMP) if you plan to deploy it on Mac/iOS. To facilitate the use of this library with Swift, a bridge file *C_Swift_bridge_header.h* is also included. 
