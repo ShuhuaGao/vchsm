@@ -29,6 +29,8 @@ For the training phase, the algorithm needs to analyze multiple training samples
 	- 16 bits per sample;
 	- 16kHz sampling frequency.
 (You may use tools such as [MediaInfo](https://mediaarea.net/en/MediaInfo/Download) to get technical details of an audio file.)
+	- For training, the materials for the target speaker and the source speaker should remain the same. For example, in source-1.wav and target-1.wav, they may both say "make America great again". 
+	- After training finished, the source speaker can speak anything he/she likes, and the algorithm will convert the voice into one like the target speaker's using the model file obtained in training.
 
 ## Example
 In the *audios* subdirectory, we have placed the audio samples from *Dr. Daniel Erro Eslava*, which includes a training set composed 20 audio samples from two speakers and a test set containing 10 audio samples from the source speaker.
