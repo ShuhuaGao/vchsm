@@ -8,7 +8,7 @@ This is a *C++ 11* implementation of the above algorithm proposed by **Dr. Danie
 + Expose **C interfaces** to facilitate interoperation with other languages on multiple platforms, such as Windows, Mac OS and iOS
 
 # Usage
-Before training and conversion, please first add the proper path like `/include/vchsm` in your IDE's header file search path such that `train_C.h` and `convert_C.h` can be found.
+Before training and conversion, please first add the proper paths like `/include/vchsm` and `/external/Eigen3.3.4` in your IDE's header file search path such that `train_C.h` and `convert_C.h` can be found and the source files can be compiled correctly.
 ## Training
 The C API for the training phase are presented in *train_C.h*， which requires the client to specify the source audios, target audios such that it can generate a model file denoting the voice conversion from the source speaker to the target speaker. All the parameters are documented in details in the corresponding header file.
 To use an API, just 
@@ -87,6 +87,8 @@ Codes for the above example are placed in [./CppAlgo/example/main.cpp](./CppAlgo
 ## Additional notes for application on Mac/iOS
 Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel programming, the equivalent implementation using GCD is provided in *train_C.mm*.  Just use *train_C.mm*  to replace *train_C.cpp* (which depends on OpenMP) if you plan to deploy it on Mac/iOS. To facilitate the use of this library with Swift, a bridge file *C_Swift_bridge_header.h* is also included. 
 
-## Publication
+# Publication
 Wu, Xiaoling, Shuhua Gao, Dong-Yan Huang, and Cheng Xiang. "Voichap: A standalone real-time voice change application on iOS platform." In Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), 2017, pp. 728-732. IEEE, 2017. 
 [get pdf here](http://www.apsipa.org/proceedings/2017/CONTENTS/papers2017/14DecThursday/TA-03/TA-03.5.pdf)
+# TODO
+Add cmake support.
