@@ -15,279 +15,285 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="aaalsf.h">
+    <ClInclude Include="include\vchsm\convert_C.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="almostEqual.h">
+    <ClInclude Include="include\vchsm\C_Swift_bridge_header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="angle.h">
+    <ClInclude Include="include\vchsm\train_C.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="automaticth2wfw.h">
+    <ClInclude Include="src\aaalsf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="bylevdurb.h">
+    <ClInclude Include="src\almostEqual.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="bymcaquat.h">
+    <ClInclude Include="src\angle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="C_Swift_bridge_header.h">
+    <ClInclude Include="src\automaticth2wfw.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="clustkmeans.h">
+    <ClInclude Include="src\bylevdurb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="comp_delta.h">
+    <ClInclude Include="src\bymcaquat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="concat.h">
+    <ClInclude Include="src\clustkmeans.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="constants.h">
+    <ClInclude Include="src\comp_delta.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="conv.h">
+    <ClInclude Include="src\concat.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="convert_C.h">
+    <ClInclude Include="src\constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="decomposephase.h">
+    <ClInclude Include="src\conv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="detalsf.h">
+    <ClInclude Include="src\decomposephase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="DynamicTimeWarping.h">
+    <ClInclude Include="src\detalsf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EigenSerialization.h">
+    <ClInclude Include="src\DynamicTimeWarping.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="extractmfcc.h">
+    <ClInclude Include="src\EigenSerialization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="f0analysisbyboersma.h">
+    <ClInclude Include="src\extractmfcc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FFT.h">
+    <ClInclude Include="src\f0analysisbyboersma.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="filter.h">
+    <ClInclude Include="src\FFT.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="find.h">
+    <ClInclude Include="src\filter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="hamming.h">
+    <ClInclude Include="src\find.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="harmonicanalysis.h">
+    <ClInclude Include="src\hamming.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HSManalyze.h">
+    <ClInclude Include="src\harmonicanalysis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HSManalyze_mfcc.h">
+    <ClInclude Include="src\HSManalyze.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HSMptraining.h">
+    <ClInclude Include="src\HSManalyze_mfcc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HSMsynthesize.h">
+    <ClInclude Include="src\HSMptraining.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HSMwfwconvert.h">
+    <ClInclude Include="src\HSMsynthesize.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="linphaseterm.h">
+    <ClInclude Include="src\HSMwfwconvert.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="lsfadap.h">
+    <ClInclude Include="src\linphaseterm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="mfcc.h">
+    <ClInclude Include="src\lsfadap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="modelSerialization.h">
+    <ClInclude Include="src\mfcc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pdist2squared.h">
+    <ClInclude Include="src\modelSerialization.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PicosElement.h">
+    <ClInclude Include="src\pdist2squared.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pinv.h">
+    <ClInclude Include="src\PicosElement.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="polarityanalysis.h">
+    <ClInclude Include="src\pinv.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="poly.h">
+    <ClInclude Include="src\polarityanalysis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="polyeval.h">
+    <ClInclude Include="src\poly.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="polytseb.h">
+    <ClInclude Include="src\polyeval.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="pow2roundup.h">
+    <ClInclude Include="src\polytseb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PrepareParallelData.h">
+    <ClInclude Include="src\pow2roundup.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="readWritePicosStructArray.h">
+    <ClInclude Include="src\PrepareParallelData.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="roots.h">
+    <ClInclude Include="src\readWritePicosStructArray.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="seq.h">
+    <ClInclude Include="src\RealTimeConverter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sliceByIndices.h">
+    <ClInclude Include="src\roots.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stochalsf.h">
+    <ClInclude Include="src\seq.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="stochasticanalysis.h">
+    <ClInclude Include="src\sliceByIndices.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="StructDefinitions.h">
+    <ClInclude Include="src\stochalsf.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sumcos.h">
+    <ClInclude Include="src\stochasticanalysis.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="train_C.h">
+    <ClInclude Include="src\StructDefinitions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="trifbank.h">
+    <ClInclude Include="src\sumcos.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="types.h">
+    <ClInclude Include="src\trifbank.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vec2frames.h">
+    <ClInclude Include="src\types.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WavHeader.h">
+    <ClInclude Include="src\vec2frames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="WavRW.h">
+    <ClInclude Include="src\WavHeader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RealTimeConverter.h">
+    <ClInclude Include="src\WavRW.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="aaalsf.cpp">
+    <None Include="include\vchsm\train_C.mm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\aaalsf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="automaticth2wfw.cpp">
+    <ClCompile Include="src\automaticth2wfw.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bylevdurb.cpp">
+    <ClCompile Include="src\bylevdurb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="bymcaquat.cpp">
+    <ClCompile Include="src\bymcaquat.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="clustkmeans.cpp">
+    <ClCompile Include="src\clustkmeans.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="comp_delta.cpp">
+    <ClCompile Include="src\comp_delta.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="conv.cpp">
+    <ClCompile Include="src\conv.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="convert_C.cpp">
+    <ClCompile Include="src\convert_C.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="decomposephase.cpp">
+    <ClCompile Include="src\decomposephase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="detalsf.cpp">
+    <ClCompile Include="src\detalsf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DynamicTimeWarping.cpp">
+    <ClCompile Include="src\DynamicTimeWarping.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="extractmfcc.cpp">
+    <ClCompile Include="src\extractmfcc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="f0analysisbyboersma.cpp">
+    <ClCompile Include="src\f0analysisbyboersma.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="harmonicanalysis.cpp">
+    <ClCompile Include="src\harmonicanalysis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HSManalyze.cpp">
+    <ClCompile Include="src\HSManalyze.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HSManalyze_mfcc.cpp">
+    <ClCompile Include="src\HSManalyze_mfcc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HSMptraining.cpp">
+    <ClCompile Include="src\HSMptraining.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HSMsynthesize.cpp">
+    <ClCompile Include="src\HSMsynthesize.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HSMwfwconvert.cpp">
+    <ClCompile Include="src\HSMwfwconvert.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="linphaseterm.cpp">
+    <ClCompile Include="src\linphaseterm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="lsfadap.cpp">
+    <ClCompile Include="src\lsfadap.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="mfcc.cpp">
+    <ClCompile Include="src\mfcc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="modelSerialization.cpp">
+    <ClCompile Include="src\modelSerialization.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="polarityanalysis.cpp">
+    <ClCompile Include="src\polarityanalysis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="polytseb.cpp">
+    <ClCompile Include="src\polytseb.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PrepareParallelData.cpp">
+    <ClCompile Include="src\PrepareParallelData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stochalsf.cpp">
+    <ClCompile Include="src\RealTimeConverter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="stochasticanalysis.cpp">
+    <ClCompile Include="src\stochalsf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="sumcos.cpp">
+    <ClCompile Include="src\stochasticanalysis.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="train_C.cpp">
+    <ClCompile Include="src\sumcos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="trifbank.cpp">
+    <ClCompile Include="src\train_C.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vec2frames.cpp">
+    <ClCompile Include="src\trifbank.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="WavRW.cpp">
+    <ClCompile Include="src\vec2frames.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RealTimeConverter.cpp">
+    <ClCompile Include="src\WavRW.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="example\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

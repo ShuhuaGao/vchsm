@@ -24,7 +24,11 @@ For the training phase, the algorithm needs to analyze multiple training samples
 
 ## Note
 + For both training and conversion APIs, a client needs to provide multiple arguments such as the list of source audios, target audios and the path of the model file. To make this process more friendly and more concise, the API can also make use of a single configuration file to specify all the required parameters. 
-+ This algorithm only supports mono [WAV](https://en.wikipedia.org/wiki/WAV) audio files. You may use tools such as [MediaInfo](https://mediaarea.net/en/MediaInfo/Download) to get technical details of an audio file.
++ **Requirements of input audios:**
+	- Mono WAV, i.e., a single channel;
+	- 16 bits per sample;
+	- 16kHz sampling frequency.
+(You may use tools such as [MediaInfo](https://mediaarea.net/en/MediaInfo/Download) to get technical details of an audio file.)
 
 ## Example
 In the *audios* subdirectory, we have placed the audio samples from *Dr. Daniel Erro Eslava*, which includes a training set composed 20 audio samples from two speakers and a test set containing 10 audio samples from the source speaker.
@@ -33,8 +37,11 @@ On a Intel Core i7 CPU with 4 cores, it takes about 30 seconds to train and a ne
 
 ```c++
 #include <cstdio>
-#include "train_C.h"
-#include "convert_C.h"
+#include "../include/vchsm/train_C.h"
+#include "../include/vchsm/convert_C.h"
+
+#define VERBOSE_TRUE 1
+#define VERBOSE_FALSE 0
 
 int main()
 {
@@ -57,7 +64,7 @@ int main()
 	// model file to be generated
 	const char* modelFile = "E:/GitHub/vchsm/models/Model.dat";
 	// start training	
-	trainHSMModel(sourceAudioList, targetAudioList, numTrainSamples, 4, modelFile);
+	trainHSMModel(sourceAudioList, targetAudioList, numTrainSamples, 4, modelFile, VERBOSE_TRUE);
 	// deallocate
 	for (int i = 0; i < numTrainSamples; ++i)
 	{
@@ -65,12 +72,11 @@ int main()
 		delete[] targetAudioList[i];
 	}
 	// perform conversion
-	const char* testAudio = "E:/GitHub/vchsm/Audios/test/jal_in_41_3.wav";
-	const char* testAudioConverted = "E:/GitHub/vchsm/Audios/test/jal_in_41_3_c.wav";
-	convertSingle(modelFile, testAudio, testAudioConverted);
+	const char* testAudio = "E:/GitHub/vchsm/Audios/test/jal_in_42_3.wav";
+	const char* testAudioConverted = "E:/GitHub/vchsm/Audios/test/jal_in_42_3_c.wav";
+	convertSingle(modelFile, testAudio, testAudioConverted, VERBOSE_TRUE);
 	// now we can compare the above audio before and after conversion
-	// and the audio from the source speaker after conversion should sound like the target
-	// speaker's voice.
+	std::getchar();
 }
 ```
 
