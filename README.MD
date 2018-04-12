@@ -8,6 +8,7 @@ This is a *C++ 11* implementation of the above algorithm proposed by **Dr. Danie
 + Expose **C interfaces** to facilitate interoperation with other languages on multiple platforms, such as Windows, Mac OS and iOS
 
 # Usage
+Before training and conversion, please first add the proper path like `/include/vchsm` in your IDE's header file search path such that `train_C.h` and `convert_C.h` can be found.
 ## Training
 The C API for the training phase are presented in *train_C.h*， which requires the client to specify the source audios, target audios such that it can generate a model file denoting the voice conversion from the source speaker to the target speaker. All the parameters are documented in details in the corresponding header file.
 To use an API, just 
