@@ -1,5 +1,5 @@
 # INTRA-LINGUAL AND CROSS-LINGUAL VOICE CONVERSION USING HARMONIC PLUS STOCHASTIC MODELS
-This is a *C++ 11* implementation of the above algorithm proposed by **Dr. Daniel Erro Eslava** based on his PhD thesis, available at [http://www.lsi.upc.edu/~nlp/papers/phd_daniel_erro.pdf]. This algorithm can be used to convert a speaker's voice to another speaker's after training with audio materials from both speakers. For fun, you could convert your voice to President Trump's by downloading his audios from YouTube, for example.
+This is a *C++ 11* implementation of the above algorithm proposed by **Dr. Daniel Erro Eslava** based on his PhD thesis, available at [http://www.lsi.upc.edu/~nlp/papers/phd_daniel_erro.pdf]. This algorithm can be used to convert a speaker's voice to another speaker's after training with audio materials from both speakers. For fun, you could convert your voice to President Trump's by downloading his audios from YouTube, for example. (NOTE: this is an old version and more features will be present in the next version.)
 
 # Features
 + Written in modern C++ (C++11/14)
