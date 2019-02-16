@@ -35,3 +35,6 @@
 *.db
 *.opendb
 
+build/
+CppAlgo/.vs/
+

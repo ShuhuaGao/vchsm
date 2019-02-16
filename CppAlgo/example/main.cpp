@@ -7,6 +7,7 @@
 
 int main()
 {
+	// NOTE: change the following directories for the data files according to your actual path.
 	// train a model with the given 20 source and target speaker's audios
 	// the audios files are named from 1 to 20
 	const char* sourceAudioDir = "E:/GitHub/vchsm/Audios/source_train/";

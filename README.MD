@@ -1,10 +1,10 @@
 # INTRA-LINGUAL AND CROSS-LINGUAL VOICE CONVERSION USING HARMONIC PLUS STOCHASTIC MODELS
-This is a *C++ 11* implementation of the above algorithm proposed by **Dr. Daniel Erro Eslava** based on his PhD thesis, available at [http://www.lsi.upc.edu/~nlp/papers/phd_daniel_erro.pdf]. This algorithm can be used to convert a speaker's voice to another speaker's after training with audio materials from both speakers. For fun, you could convert your voice to President Trump's by downloading his audios from YouTube, for example. (NOTE: this is an old version and more features will be present in the next version.)
+This is a *C++ 11* implementation and verification of the above algorithm proposed by **Dr. Daniel Erro Eslava** based on his PhD thesis, available at [http://www.lsi.upc.edu/~nlp/papers/phd_daniel_erro.pdf], specially on mobile platforms. This algorithm can be used to convert a speaker's voice to another speaker's after training with corpora from both speakers. For fun, you could convert your voice to President Trump's by downloading his audios from YouTube, for example. (**NOTE**: this is just a preliminary version corresponding to Ref. [1] and codes involving more features introduced in Ref. [2] are not provided here due to proprietary.)
 
 # Features
 + Written in modern C++ (C++11/14)
 + Depend on the [Eigen](http://eigen.tuxfamily.org/index.php?title=Main_Page) linear algebra library for high numeric computation performance
-+ Utilize OpenMP on Windows or GCD on Mac/iOS to take full advantage of parallel computation on multiple cores of a modern CPU for high speed
++ Utilize OpenMP on Windows or GCD on Mac/iOS to take full advantage of parallel computation on multiple cores of a modern CPU for high speed. To achieve more fine-grained control of parallelism, the *thread* module introduced in C++ 11 is a better choice.
 + Expose **C interfaces** to facilitate interoperation with other languages on multiple platforms, such as Windows, Mac OS and iOS
 
 # Usage
@@ -15,12 +15,29 @@ To use an API, just
 ```c++
 #include "train_C.h"
 ```
+Alternatively, if you are familiar with CMake, the above include paths can be added to the CMakeLists.txt using the `target_include_directories`. Please refer to the *CMakeLists.txt* in this repository for an example. 
+
 ## Conversion
+
 After training, this algorithm produces a model file (whose path is specified by the user in the training phase). Then we can convert any voice audios from the source speaker to make it hear like the target speaker's voice with this model file. All the C APIs for conversion are contained in *convert_C.h,* which are well documented in the header file.
 ```c++
 #include "convert_C.h"
 ```
+## Build the example
+[**NOTE**: please first change the corresponding paths in *main.cpp* according to your actual configuration.]
+
+### With Visual Studio
+
+If you work with Visual Studio, the easiest way is to use the provided solution file directly in *CppAlgo/CppAlgo.sln*.
+### With CMake
++ Create a build directory: `mkdir build` and `cd build`
++ Run CMake: `cmake ..`
++ Build using make: `make`
++ Run the generated executable: `./vchsm`
+
+
 ## Parallel computing
+
 For the training phase, the algorithm needs to analyze multiple training samples (audios). To speed up the training procedure, a natural way is to divide the training set into several subsets whereby each subset can be processed simultaneously on a multiple-core processor. A naive implementation of this parallel process idea is realized with [OpenMP](https://en.wikipedia.org/wiki/OpenMP) in `train_c.cpp` or [GCD](https://en.wikipedia.org/wiki/Grand_Central_Dispatch) in `train_c.mm`.
 
 ## Note
@@ -88,6 +105,5 @@ Codes for the above example are placed in [./CppAlgo/example/main.cpp](./CppAlgo
 Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel programming, the equivalent implementation using GCD is provided in *train_C.mm*.  Just use *train_C.mm*  to replace *train_C.cpp* (which depends on OpenMP) if you plan to deploy it on Mac/iOS. To facilitate the use of this library with Swift, a bridge file *C_Swift_bridge_header.h* is also included. 
 
 # Publication
-
-# TODO
-Add cmake support.
+[1] Wu, Xiaoling, Shuhua Gao, Dong-Yan Huang, and Cheng Xiang. "Voichap: A standalone real-time voice change application on iOS platform." In 2017 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), pp. 728-732. IEEE, 2017.
+[2] Gao, Shuhua, Xiaoling Wu, Cheng Xiang, and Dongyan Huang. "Development of a computationally efficient voice conversion system on mobile phones." APSIPA Transactions on Signal and Information Processing 8 (2019).
