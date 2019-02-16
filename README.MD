@@ -106,4 +106,5 @@ Since the Mac/iOS platforms prefer GCD to OpenMP for multiple-core parallel prog
 
 # Publication
 [1] Wu, Xiaoling, Shuhua Gao, Dong-Yan Huang, and Cheng Xiang. "Voichap: A standalone real-time voice change application on iOS platform." In 2017 Asia-Pacific Signal and Information Processing Association Annual Summit and Conference (APSIPA ASC), pp. 728-732. IEEE, 2017.
-[2] Gao, Shuhua, Xiaoling Wu, Cheng Xiang, and Dongyan Huang. "Development of a computationally efficient voice conversion system on mobile phones." APSIPA Transactions on Signal and Information Processing 8 (2019).
+
+[2] Gao, Shuhua, Xiaoling Wu, Cheng Xiang, and Dongyan Huang. "Development of a computationally efficient voice conversion system on mobile phones." APSIPA Transactions on Signal and Information Processing 8 (2019). [PDF](https://www.researchgate.net/publication/330140206_Development_of_a_computationally_efficient_voice_conversion_system_on_mobile_phones)
