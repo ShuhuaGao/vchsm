@@ -1,5 +1,5 @@
 #pragma once
-#include <Eigen/dense>
+#include <Eigen/Dense>
 #include "PicosElement.h"
 #include <vector>
 #include "types.h"
